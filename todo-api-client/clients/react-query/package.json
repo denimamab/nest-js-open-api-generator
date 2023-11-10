@@ -1,0 +1,29 @@
+{
+  "name": "@todo-api-client/react-query",
+  "version": "1.0.0",
+  "description": "OpenAPI client for @todo-api-client/react-query",
+  "author": "OpenAPI-Generator Contributors",
+  "keywords": [
+    "axios",
+    "typescript",
+    "openapi-client",
+    "openapi-generator",
+    "@todo-api-client/react-query"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/api/axios-client.js",
+  "typings": "./dist/api/axios-client.types.d.ts",
+  "scripts": {
+    "clean": "rm -rf api",
+    "codegen": "npm run clean && react-query-swagger /tanstack /input:http://localhost:3000/api-json /output:api/axios-client.ts /template:Axios /use-recommended-configuration /minimal",
+    "build": "tsc --outDir dist/"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "axios": "^0.21.4"
+  },
+  "devDependencies": {
+    "react-query-swagger": "^15.10.3",
+    "@types/react": "18.2.37"
+  }
+}
